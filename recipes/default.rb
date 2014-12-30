@@ -47,6 +47,6 @@ elsif node['god']['init_style'] == 'init'
   end
 
   service "god" do
-    action :start
+    action [:enable, :start]
   end
 end
