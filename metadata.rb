@@ -12,4 +12,4 @@ recipe "god", "Installs god and starts it"
   supports os
 end
 
-depends "runit"
+#depends "runit"
