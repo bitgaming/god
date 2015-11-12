@@ -1,4 +1,5 @@
 default['god']['bin']               = '/usr/bin/god'
+default['god']['logfile']               = '/var/log/god.log'
 default['god']['init_style']        = 'runit'
 default['god']['email']['from']     = 'god@'+node[:domain].to_s
 default['god']['email']['contacts'] = [['dev', 'developers@'+node[:domain].to_s, 'developers']]

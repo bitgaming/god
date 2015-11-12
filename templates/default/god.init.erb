@@ -17,7 +17,7 @@ RETVAL=0
 case "$1" in
     start)
       # Create pid directory
-      <%= node[:god][:bin] %> -c $CONF_DIR/master.god
+      <%= node[:god][:bin] %> -c $CONF_DIR/master.god -l node[:god][:logfile]
       RETVAL=$?
   ;;
     stop)
@@ -26,7 +26,7 @@ case "$1" in
   ;;
     restart)
       <%= node[:god][:bin] %> terminate
-      <%= node[:god][:bin] %> -c $CONF_DIR/master.god
+      <%= node[:god][:bin] %> -c $CONF_DIR/master.god -l node[:god][:logfile]
       RETVAL=$?
   ;;
     status)
